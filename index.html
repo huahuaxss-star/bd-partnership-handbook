@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#ffffff" id="themeColor">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="商务手册">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>商务合作手册</title>
+<script>
+(function () {
+  var t = null;
+  try { t = localStorage.getItem("bd-handbook-theme"); } catch (e) {}
+  if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+})();
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-bold.css">
+<style>
+:root {
+  /* 蓝白、全页楷体、直角、细分隔线、规整网格；手机优先，一页往下读 */
+  --bg: #ffffff;
+  --surface: #f2f6fb;
+  --ink: #14233a;
+  --muted: #56667b;
+  --line: #d3deea;
+  --accent: #1d5bb8;
+  --accent-soft: #e4edf9;
+  --good: #1f7a4d;
+  --kai: "Kaiti SC", "STKaiti", "KaiTi", "楷体", "LXGW WenKai", "BiauKai", serif;
+  --fs: 17px; --fs-small: 15px; --fs-label: 13px;
+  --gutter: max(16px, env(safe-area-inset-left), env(safe-area-inset-right));
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1520; --surface: #132031; --ink: #e7edf5; --muted: #9aaabd;
+    --line: #26374c; --accent: #79abf0; --accent-soft: #1a2c45; --good: #5cc28f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1520; --surface: #132031; --ink: #e7edf5; --muted: #9aaabd;
+  --line: #26374c; --accent: #79abf0; --accent-soft: #1a2c45; --good: #5cc28f; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: 64px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body, button, input, select, textarea { font-family: var(--kai); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-size: var(--fs); line-height: 1.8; letter-spacing: .01em; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 0 var(--gutter); }
+h1, h2, h3 { font-weight: 700; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(30px, 7.4vw, 46px); line-height: 1.3; }
+h2 { font-size: clamp(25px, 5.6vw, 32px); line-height: 1.35; }
+h3 { font-size: clamp(20px, 4.6vw, 22px); line-height: 1.45; }
+p { margin: 0; }
+p, li, summary, .lead, td { text-wrap: pretty; }
+.muted { color: var(--muted); }
+.small { font-size: var(--fs-small); }
+
+/* 顶部目录 + 主题切换 */
+nav.toc { position: sticky; top: 0; z-index: 5; background: var(--bg); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top); }
+nav.toc .wrap { display: flex; align-items: center; gap: 8px; }
+.toc-links { display: flex; gap: 2px; overflow-x: auto; white-space: nowrap; padding: 6px 0; scrollbar-width: none; -webkit-overflow-scrolling: touch; flex: 1; min-width: 0; }
+.toc-links::-webkit-scrollbar { display: none; }
+.toc-links a { text-decoration: none; color: var(--muted); padding: 8px 12px; font-size: 16px; border: 1px solid transparent; border-bottom-width: 2px; min-height: 40px; display: inline-flex; align-items: center; }
+.toc-links a:hover, .toc-links a:focus-visible { color: var(--accent); outline: none; }
+.toc-links a.active { color: var(--accent); border-bottom-color: var(--accent); }
+.theme-btn { flex: none; min-height: 36px; padding: 4px 10px; font-size: 15px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); border-radius: 0; cursor: pointer; }
+.theme-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+header.cover { padding: 44px 0 36px; border-bottom: 1px solid var(--line); }
+.cover .lead { font-size: clamp(19px, 4.4vw, 24px); margin-top: 14px; max-width: 34em; }
+.grid { display: grid; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.grid > * { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 16px 18px; background: var(--bg); }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+.cover .grid { margin-top: 28px; }
+.k { font-size: 26px; font-weight: 700; color: var(--accent); line-height: 1.3; }
+.howto { margin-top: 22px; display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 6px 26px; }
+
+section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+section:nth-of-type(even) { background: var(--surface); }
+.sec-head { display: grid; grid-template-columns: 58px 1fr; gap: 6px 12px; align-items: baseline; margin-bottom: 24px; }
+.num { font-size: 36px; font-weight: 700; color: var(--accent); line-height: 1; }
+.sec-head p { grid-column: 2; }
+
+.formula { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 4px 0 24px; font-size: 19px; }
+.formula .box { border: 1px solid var(--accent); padding: 6px 14px; background: var(--bg); }
+.formula .arrow { color: var(--muted); }
+
+.method { padding: 26px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 1fr 1fr; gap: 14px 30px; }
+.method:first-of-type { border-top: none; padding-top: 0; }
+.method h3, .method .why, .method .ask { grid-column: 1 / -1; }
+.label { font-size: var(--fs-label); letter-spacing: .1em; color: var(--muted); margin-bottom: 4px; }
+ol, ul { margin: 0; padding-left: 1.4em; }
+li + li { margin-top: 4px; }
+.ask { background: var(--accent-soft); padding: 12px 16px; font-size: 18px; }
+
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; background: var(--bg); }
+th, td { border: 1px solid var(--line); padding: 10px 14px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 700; font-size: 16px; }
+td:first-child { font-weight: 700; }
+
+/* 表单 */
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-bottom: 18px; padding: 14px 16px; border: 1px solid var(--line); background: var(--bg); }
+.toolbar .pick { flex: 1 1 220px; min-width: 0; }
+.toolbar label { display: block; font-size: 14px; color: var(--muted); margin-bottom: 4px; }
+form.tpl { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 22px; }
+form.tpl .full { grid-column: 1 / -1; }
+form.tpl label { display: block; font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+form.tpl label .hint { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 6px; }
+input, textarea, select {
+  width: 100%; font-size: 16px; line-height: 1.6; color: var(--ink); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 0; padding: 10px 12px; -webkit-appearance: none; appearance: none;
+}
+select { background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%), linear-gradient(135deg, var(--muted) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size: 6px 6px; background-repeat: no-repeat; padding-right: 34px; }
+textarea { min-height: 84px; resize: vertical; }
+input:focus, textarea:focus, select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+fieldset { border: 1px solid var(--line); padding: 14px 16px 16px; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 16px; min-width: 0; }
+legend { padding: 0 6px; font-size: 18px; font-weight: 700; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.after { margin-top: 16px; }
+button { font-size: 16px; border-radius: 0; cursor: pointer; padding: 10px 18px; min-height: 44px; border: 1px solid var(--accent); background: var(--accent); color: var(--bg); -webkit-appearance: none; appearance: none; }
+button.ghost { background: transparent; color: var(--accent); }
+button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+#copyOut { min-height: 180px; margin-top: 12px; font-size: 15px; line-height: 1.7; display: none; }
+
+.dir { padding: 22px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 210px 1fr 1fr 1fr; gap: 12px 24px; }
+.dir:first-of-type { border-top: none; padding-top: 0; }
+.tag { display: inline-block; font-size: 13px; font-weight: 400; border: 1px solid var(--line); color: var(--muted); padding: 0 6px; margin-left: 8px; vertical-align: middle; line-height: 1.6; }
+
+.checks { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.checks li { margin: 0; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg); }
+.checks label { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; padding: 12px 16px; min-height: 48px; }
+.checks input { margin-top: 6px; width: 20px; height: 20px; flex: none; padding: 0; accent-color: var(--accent); -webkit-appearance: checkbox; appearance: auto; }
+
+/* 自测卡 */
+.review-bar { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; margin-bottom: 16px; }
+.progress { font-size: 18px; }
+.progress b { color: var(--good); }
+.switch { display: inline-flex; gap: 8px; align-items: center; cursor: pointer; min-height: 44px; }
+.switch input { width: 20px; height: 20px; padding: 0; accent-color: var(--accent); -webkit-appearance: checkbox; appearance: auto; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.cards details { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 14px 16px; background: var(--bg); }
+.cards summary { cursor: pointer; font-size: 18px; font-weight: 700; list-style: none; min-height: 32px; }
+.cards summary::-webkit-details-marker { display: none; }
+.cards summary::before { content: "问　"; color: var(--accent); }
+.cards details[open] summary { margin-bottom: 8px; }
+.cards details > p::before { content: "答　"; color: var(--muted); }
+.cards .mark { display: flex; gap: 8px; margin-top: 12px; }
+.cards .mark button { min-height: 38px; padding: 4px 12px; font-size: 15px; }
+.cards details.mastered summary { color: var(--muted); }
+.cards details.mastered summary::after { content: "已掌握"; font-size: 13px; font-weight: 400; color: var(--good); border: 1px solid var(--good); padding: 0 6px; margin-left: 8px; vertical-align: middle; }
+.cards.only-todo details.mastered { display: none; }
+.cards .done-note { display: none; padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); grid-column: 1 / -1; background: var(--bg); }
+.cards.only-todo.all-done .done-note { display: block; }
+
+/* 复盘 */
+.empty { border: 1px dashed var(--line); padding: 18px; background: var(--bg); margin-top: 18px; }
+
+footer { padding: 28px 0 calc(80px + env(safe-area-inset-bottom)); }
+
+/* 回到顶部 */
+#toTop { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 6; min-height: 46px; padding: 8px 14px; font-size: 15px; box-shadow: 0 2px 10px rgba(0,0,0,.18); opacity: 0; pointer-events: none; transition: opacity .2s; }
+#toTop.show { opacity: 1; pointer-events: auto; }
+@media (prefers-reduced-motion: reduce) { #toTop { transition: none; } }
+
+/* 平板与横屏手机 */
+@media (max-width: 900px) {
+  .dir { grid-template-columns: 1fr 1fr; }
+  .dir h3 { grid-column: 1 / -1; }
+  .g4 { grid-template-columns: repeat(2, 1fr); }
+  .howto { grid-template-columns: repeat(2, auto); }
+}
+/* 竖屏手机（iPhone 375–440 宽） */
+@media (max-width: 640px) {
+  body { line-height: 1.85; }
+  header.cover { padding: 32px 0 28px; }
+  section { padding: 36px 0; }
+  .sec-head { grid-template-columns: 44px 1fr; margin-bottom: 20px; }
+  .num { font-size: 30px; }
+  .g3 { grid-template-columns: 1fr; }
+  .grid > * { padding: 14px 16px; }
+  .howto { grid-template-columns: 1fr; gap: 2px; }
+  .formula { flex-direction: column; align-items: stretch; gap: 4px; font-size: 18px; }
+  .formula .box { text-align: center; }
+  .formula .arrow { text-align: center; transform: rotate(90deg); line-height: 1.2; }
+  .method, .dir { grid-template-columns: 1fr; gap: 12px; padding: 22px 0; }
+  .ask { font-size: 17px; }
+  form.tpl, fieldset { grid-template-columns: 1fr; }
+  .checks, .cards { grid-template-columns: 1fr; }
+  .toolbar { padding: 12px; }
+  .toolbar .pick { flex-basis: 100%; }
+  /* 表格改为逐项卡片，免横滑 */
+  table, thead, tbody, tr, td { display: block; }
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table { border-top: 1px solid var(--line); }
+  tr { border: 1px solid var(--line); border-top: none; padding: 10px 14px; background: var(--bg); }
+  td { border: none; padding: 2px 0; display: grid; grid-template-columns: 6.2em 1fr; gap: 8px; }
+  td::before { content: attr(data-label); color: var(--muted); font-size: 14px; font-weight: 400; padding-top: 2px; }
+  td:first-child { font-size: 18px; display: block; padding-bottom: 6px; }
+  td:first-child::before { content: none; }
+}
+@media (max-width: 380px) {
+  :root { --fs: 16px; }
+  .k { font-size: 23px; }
+  .grid > * { padding: 12px; }
+  .toc-links a { padding: 8px 9px; }
+}
+
+/* v4 */
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; border-top: 1px solid var(--line); background: var(--bg); }
+.steps li { counter-increment: s; margin: 0; display: grid; grid-template-columns: 44px 1fr 1.2fr; gap: 4px 14px; padding: 14px 16px; border: 1px solid var(--line); border-top: none; align-items: baseline; }
+.steps li::before { content: counter(s); font-size: 24px; font-weight: 700; color: var(--accent); line-height: 1.2; }
+.steps b { font-size: 19px; }
+.steps span { color: var(--muted); }
+.gap-top { margin-top: 22px; }
+.dir h3 { color: var(--accent); }
+@media (max-width: 640px) {
+  .steps li { grid-template-columns: 34px 1fr; }
+  .steps span { grid-column: 2; }
+  .dir { gap: 8px; padding: 18px 0; }
+  .dir > div { display: grid; grid-template-columns: 3em 1fr; gap: 8px; align-items: baseline; }
+  .dir .label { margin: 0; }
+}
+
+/* v5 */
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.abil { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.abil li { margin: 0; display: grid; grid-template-columns: 5em 1fr auto auto; gap: 6px 16px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.abil b { font-size: 20px; color: var(--accent); }
+.abil a { text-decoration: none; font-size: 14px; color: var(--muted); border: 1px solid var(--line); padding: 2px 8px; white-space: nowrap; }
+.seg { display: inline-flex; }
+.seg button { min-height: 36px; padding: 4px 10px; font-size: 14px; background: var(--bg); color: var(--muted); border: 1px solid var(--line); margin-left: -1px; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--bg); border-color: var(--accent); position: relative; }
+.selfnote { margin-top: 10px; }
+.rules b { display: block; font-size: 18px; margin-bottom: 4px; }
+.checks.one { grid-template-columns: 1fr; }
+.checks.one b { display: block; font-size: 18px; }
+fieldset.terms-grid { display: block; }
+.trow { display: grid; grid-template-columns: 9em 1fr 1fr 1fr; gap: 8px; align-items: center; }
+.trow + .trow { margin-top: 10px; }
+.tname { font-weight: 700; font-size: 16px; }
+@media (max-width: 640px) {
+  .g2 { grid-template-columns: 1fr; }
+  .abil li { grid-template-columns: 1fr auto; gap: 4px 10px; }
+  .abil span { grid-column: 1 / -1; grid-row: 2; }
+  .abil a { grid-column: 2; grid-row: 1; justify-self: end; }
+  .abil .seg { grid-column: 1 / -1; grid-row: 3; margin-top: 4px; }
+  .seg button { flex: 1; }
+  .seg { display: flex; }
+  .trow { grid-template-columns: repeat(3, 1fr); }
+  .tname { grid-column: 1 / -1; }
+}
+/* v2 三层 */
+.brief { margin-top: 24px; border-top: 1px solid var(--line); }
+.brief .row { display: grid; grid-template-columns: 5.5em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.k2 { color: var(--muted); font-size: 15px; }
+.brief b { font-size: 19px; }
+.pill { display: inline-block; font-size: 14px; color: var(--bg); background: var(--accent); padding: 0 8px; margin-left: 6px; vertical-align: middle; }
+.alert { margin-top: 24px; border: 1px solid var(--bad); padding: 14px 16px; background: var(--bg); }
+.alert .label { color: var(--bad); font-size: 15px; font-weight: 700; letter-spacing: 0; }
+.alert li + li { margin-top: 8px; }
+.say { border: 1px solid var(--line); background: var(--bg); padding: 16px 18px; margin-top: 14px; }
+.say.open { border-color: var(--accent); }
+.say .head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-bottom: 10px; }
+.say .head b { font-size: 20px; }
+.code { color: var(--muted); font-size: 13px; border: 1px solid var(--line); padding: 0 5px; line-height: 1.6; }
+.say dl, .tlist dl, dl.plain { margin: 0; display: grid; grid-template-columns: 4.5em 1fr; gap: 6px 12px; }
+.say dt, .tlist dt { color: var(--muted); font-size: 15px; }
+.say dd, .tlist dd, dl.plain dd { margin: 0; }
+.quote { font-size: 19px; line-height: 1.8; }
+.note { margin-top: 10px; font-size: 15px; color: var(--warn-c); }
+.tlist { border-top: 1px solid var(--line); }
+.tlist details { border: 1px solid var(--line); border-top: none; background: var(--bg); }
+.tlist summary { list-style: none; cursor: pointer; padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.tlist summary::-webkit-details-marker { display: none; }
+.tlist summary::after { content: "展开"; margin-left: auto; font-size: 13px; color: var(--accent); }
+.tlist details[open] summary::after { content: "收起"; }
+.tlist summary b { font-size: 18px; }
+.ask1 { flex-basis: 100%; color: var(--muted); font-size: 15px; }
+.tlist dl { padding: 0 16px 14px; }
+.appx details { border: 1px solid var(--line); background: var(--bg); margin-top: -1px; }
+.appx summary { cursor: pointer; padding: 14px 16px; font-size: 18px; font-weight: 700; }
+.appx details > *:not(summary) { margin: 0 16px 14px; }
+dl.plain { grid-template-columns: 1fr; gap: 2px; }
+dl.plain dt { font-weight: 700; margin-top: 8px; }
+.appx p + p { margin-top: 8px; }
+@media (max-width: 640px) {
+  .brief .row { grid-template-columns: 4.5em 1fr; }
+  .say { padding: 14px; }
+  .say dl, .tlist dl { grid-template-columns: 3.6em 1fr; }
+}
+
+.code, .lv { display: none; }
+dl.words { margin: 0; display: grid; grid-template-columns: 6em 1fr; border-top: 1px solid var(--line); }
+dl.words dt, dl.words dd { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line); }
+dl.words dt { font-weight: 700; color: var(--accent); }
+.brief .k2 { color: var(--accent); font-weight: 700; font-size: 17px; }
+@media (max-width: 640px) { dl.words { grid-template-columns: 5em 1fr; } }
+
+/* v7 团队版 */
+.intro { margin-top: 18px; display: grid; gap: 10px; max-width: 46em; }
+.intro p { color: var(--ink); }
+.part { background: var(--accent); color: #fff; padding: 22px 0; }
+.part .wrap { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; align-items: baseline; }
+.part span { font-size: 15px; opacity: .85; }
+.part b { font-size: clamp(22px, 5vw, 28px); }
+.part p { grid-column: 1 / -1; opacity: .9; }
+.part strong { text-decoration: underline; text-underline-offset: 4px; }
+.key { font-size: 19px; font-weight: 700; border-left: 0; background: var(--accent-soft); padding: 10px 14px; margin-bottom: 18px; }
+.grid b { display: block; font-size: 17px; margin-bottom: 2px; }
+.flow { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.flow li { margin: 0; display: grid; grid-template-columns: 11em 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.flow li span:first-child { font-weight: 700; }
+.eg { border: 1px dashed var(--accent); background: var(--bg); padding: 14px 16px; }
+.tpl { margin-top: 16px; font-size: 15px; color: var(--muted); }
+.habits { border: 1px solid var(--accent); padding: 14px 16px; background: var(--bg); }
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 18px; background: var(--accent); color: var(--bg); text-decoration: none; }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.appx details { border: 1px solid var(--line); background: var(--bg); margin-top: -1px; }
+.appx summary { cursor: pointer; padding: 14px 16px; font-size: 18px; font-weight: 700; }
+.appx details > *:not(summary) { margin: 0 16px 12px; }
+.appx table td:first-child { white-space: normal; }
+tr.grp td { background: var(--accent-soft); font-weight: 700; }
+.timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--accent); }
+.timeline li { padding: 4px 0 16px 20px; position: relative; display: grid; gap: 2px; margin: 0; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 14px; width: 12px; height: 12px; background: var(--accent); }
+.timeline b { font-size: 18px; }
+dl.words { margin: 0; display: grid; grid-template-columns: 6em 1fr; border-top: 1px solid var(--line); }
+dl.words dt, dl.words dd { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--line); }
+dl.words dt { font-weight: 700; color: var(--accent); }
+@media (max-width: 640px) {
+  table.two td { display: block; padding: 0; }
+  table.two td::before { content: none; }
+  table.two td:first-child { font-size: 16px; padding-bottom: 2px; }
+  .flow li { grid-template-columns: 1fr; gap: 2px; }
+  dl.words { grid-template-columns: 5em 1fr; }
+  tr.grp td::before { content: none; }
+  tr.grp td { display: block; }
+}
+</style>
+</head>
+<body>
+
+<nav class="toc" aria-label="目录">
+  <div class="wrap">
+    <div class="toc-links" id="tocLinks">
+      <a href="#top">总纲</a>
+      <a href="#words">词</a>
+      <a href="#c1">1 研究</a>
+      <a href="#c2">2 数据</a>
+      <a href="#c3">3 日常</a>
+      <a href="#c4">4 谈判</a>
+      <a href="#c5">5 落地</a>
+      <a href="#c6">6 出问题</a>
+      <a href="#c7">7 新业务</a>
+      <a href="#appx">工具箱</a>
+    </div>
+    <button type="button" class="theme-btn" id="themeBtn" aria-label="切换浅色或深色">跟随系统</button>
+  </div>
+</nav>
+
+<header class="cover" id="top">
+  <div class="wrap">
+    <p class="muted small">商务合作手册 · 团队版 · 2026-11-13 v8</p>
+    <h1>商务合作手册</h1>
+    <p class="lead">我们给平台分成，是付钱的一方，换的是平台的服务</p>
+    <p class="intro">好比品牌给卖场扣点，也要求卖场给好位置、做促销、给销售数据。但平台手里也有入口、审核、系统控制和账号体系，不同平台、不同时期，谁更需要谁不一样。所以先研究，再经营</p>
+
+    <div class="label gap-top">三条原则</div>
+    <ol class="steps">
+      <li><b>每一份让利都要换回服务</b><span>资源、首发、审核、技术支持、数据。说不出换回了什么，就是白给</span></li>
+      <li><b>服务要写得能检查，付款跟着服务走</b><span>给什么、给多少、多久、没给怎么办；服务到位按时结，不到位按约定追补或扣减</span></li>
+      <li><b>数字要有出处，谈判不超出授权</b><span>来源、截止时间、口径缺一不可；不替项目组、老板或对方做承诺</span></li>
+    </ol>
+
+    <div class="grid g3 gap-top route">
+      <div><div class="label">新人第 1 周</div><p>总纲、常用词、第 1—2 章</p></div>
+      <div><div class="label">接手一个平台后</div><p>第 3 章，学会填平台档案和服务检查表</p></div>
+      <div><div class="label">第一次参与谈判前</div><p>第 4 章和谈判准备单；其他章需要时查</p></div>
+    </div>
+  </div>
+</header>
+
+<section id="words">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">词</span><h2>先懂这些词</h2>
+      <p class="muted">正文不再重复解释。带“≠”的最容易用错</p></div>
+    <dl class="words">
+      <dt>分成</dt><dd>平台从游戏收入里拿走的比例。20% 就是每收入 100 元给平台 20 元</dd>
+      <dt>计费基数</dt><dd>分成按哪个数算：总流水，还是扣掉税、退款、通道费以后的钱。基数不同，同样的比例差很多</dd>
+      <dt>归属期</dt><dd>一个用户算作“平台带来的”能算多久</dd>
+      <dt>资源位</dt><dd>平台上的推荐位置：商店首页、开屏、推送等</dd>
+      <dt>首发</dt><dd>新游戏先在这个平台上线</dd>
+      <dt>基础服务</dt><dd>上架、审核、支付、结算。合作本来就该有，不额外付钱</dd>
+      <dt>额外服务</dt><dd>资源位、首发档期、技术支持、数据、联合营销。让利要换的是这些</dd>
+      <dt>纯新 / 回流</dt><dd>纯新是第一次玩这款游戏的人；回流是以前玩过、离开一段时间又回来的人</dd>
+      <dt>系统新增 ≠ 纯新</dt><dd>系统新增是第一次在某个系统上玩，换系统的老玩家也算在内</dd>
+      <dt>增量</dt><dd>因为合作才多出来的用户或收入，不算本来就会有的</dd>
+      <dt>投入产出</dt><dd>付出的分成、人力、资源，和换回的用户、收入相比，值不值</dd>
+      <dt>自动续约</dt><dd>到期没人提异议就自动延长。想改条件，要在规定时间前书面提出</dd>
+      <dt>结算对账</dt><dd>双方按约定核对金额、开票、付款。收到结算单 ≠ 对完账 ≠ 已付款</dd>
+      <dt>出货量 ≠ 销量</dt><dd>出货是厂商发给渠道的数量，销量是卖到用户手里的</dd>
+      <dt>设备覆盖 ≠ 活跃用户</dt><dd>覆盖多少台设备，不代表有多少人在用</dd>
+      <dt>品牌口径 ≠ 含子品牌</dt><dd>公开数据常按单一品牌统计，内部分组可能含子品牌，两者不能混算</dd>
+      <dt>榜单收入 ≠ 官方流水</dt><dd>第三方榜单是估算，引用时注明</dd>
+    </dl>
+  </div>
+</section>
+
+<div class="part"><div class="wrap"><span>第一部分</span><b>研究：看透平台的生意</b><p>研究数据<strong>每月刷新</strong>。谈判桌上的分量，大多来自谈判之前的研究</p></div></div>
+
+<section id="c1">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">1</span><h2>研究平台和行业</h2></div>
+    <p class="key">谈之前先回答：平台今年靠什么赚钱、最缺什么，别家给的条件是什么</p>
+    <div class="grid g3">
+      <div><b>硬件账</b><p>出货量、均价、零部件成本、毛利</p></div>
+      <div><b>服务账</b><p>应用商店、广告、云服务等互联网收入和占比</p></div>
+      <div><b>生态账</b><p>系统装机量、活跃设备、开发者和应用数量</p></div>
+      <div><b>战略账</b><p>今年的重点：新系统、AI 入口、高端化、出海</p></div>
+      <div><b>其他平台</b><p>同类产品拿到的条件和服务，各家规模变化</p></div>
+      <div><b>头部游戏公司</b><p>收入、主力产品、新品节奏、渠道策略</p></div>
+    </div>
+    <div class="label gap-top">怎么落到谈判上</div>
+    <ul class="flow">
+      <li><span>硬件利润被压缩</span><span>更依赖服务收入，分成会谈得更硬；但也更需要头部游戏带动换机，这是我们的筹码</span></li>
+      <li><span>新系统推广期</span><span>最缺头部应用上架和适配，首发和适配最值钱</span></li>
+      <li><span>新入口起步期</span><span>需要应用接入撑起生态，接入本身可以换资源</span></li>
+      <li><span>别家给的条件</span><span>是开价和底线的参照，不一定说出口</span></li>
+    </ul>
+    <div class="grid g2 gap-top">
+      <div><div class="label">怎么做</div><ul>
+        <li>每个平台一份平台档案，每月刷新，不等到谈判前临时找</li>
+        <li>跟进对方的财报、业绩会、发布会、开发者大会</li>
+        <li>每份研究最后写一句：这对我们意味着什么</li>
+      </ul>
+      <div class="label gap-top">容易踩的坑</div><ul>
+        <li>只听对方怎么说，不看对方财报</li>
+        <li>用一年前的数据判断今天的局面</li>
+        <li>只看排名，不看变化</li>
+      </ul></div>
+      <div class="eg"><div class="label">例子（虚构）</div><p>某厂商最新财报显示手机毛利率下滑、互联网服务收入占比上升，同期存储芯片报价大涨。判断：对方会更看重分成收入，开价偏硬；但新机需要游戏性能做卖点。应对：用“新机联合调优 + 首发”去换分成计算方式的调整</p></div>
+    </div>
+    <p class="tpl">模板：<a href="#t1">平台档案</a></p>
+  </div>
+</section>
+
+<section id="c2">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">2</span><h2>把数据用对</h2></div>
+    <p class="key">拿口径错的数字上谈判桌，比没有数字更伤</p>
+    <div class="grid g2">
+      <div><div class="label">怎么做</div><ol>
+        <li>每个数字问三件事：从哪来、截至什么时候、算的是什么</li>
+        <li>按可信度用来源：官方财报和公告、第三方研究机构、供应链报价、媒体报道、传闻。越往后越要标“待核”</li>
+        <li>事实、计算、估算、判断分开写</li>
+        <li>一句话结论在前，一个关键数字支撑，口径写在后面</li>
+        <li>资料收集、整理、制图交给 AI 工具；核对和判断自己做</li>
+      </ol></div>
+      <div><div class="label">容易踩的坑</div><ul>
+        <li>把带“≠”的词混着用（见<a href="#words">常用词</a>）</li>
+        <li>公开查不到就写“没有”，应写“待核”</li>
+        <li>半年数据翻倍当全年；未满月数据不标截止日</li>
+      </ul></div>
+    </div>
+    <p class="tpl">模板：<a href="#t7">数据来源清单</a></p>
+  </div>
+</section>
+
+<div class="part"><div class="wrap"><span>第二部分</span><b>经营：把钱换成服务</b><p>服务是盯出来的，不是等出来的</p></div></div>
+
+<section id="c3">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">3</span><h2>日常经营</h2>
+      <p class="muted">每周、每月、每季度</p></div>
+    <p class="key">每周看、每月查、每季度算账</p>
+    <div class="grid g3">
+      <div><div class="label">每周</div><ul>
+        <li>资源是否按排期上线</li>
+        <li>审核、安装有没有异常</li>
+        <li>问题当天记下来</li>
+      </ul></div>
+      <div><div class="label">每月</div><ul>
+        <li>刷新数据，填服务检查表，没到位的书面追</li>
+        <li>看效果：新用户（拆纯新和回流）、收入、投入产出；和上月、去年同期、没合作的渠道比</li>
+        <li>写一句本月结论和下月重点</li>
+      </ul></div>
+      <div><div class="label">每季度</div><ul>
+        <li>对账结算</li>
+        <li>按服务到位情况定付款节奏，该追补的追补</li>
+        <li>好用的做法记下来，看能不能用到别的平台</li>
+      </ul></div>
+    </div>
+    <p class="gap-top"><b>关系</b>：对方每一层都要有人认识（业务、技术、商店运营、结算、上级领导），我方按层级对接，不要只靠一个对接人</p>
+    <div class="label gap-top">容易踩的坑</div>
+    <ul>
+      <li>出了事才联系对方；对方口头答应，没留文字</li>
+      <li>问题攒到年底一次算，证据早就没了</li>
+      <li>收入涨了就说合作有效（可能只是老玩家多花了钱）</li>
+    </ul>
+    <p class="tpl">模板：<a href="#t2">服务检查表</a> · <a href="#t3">月度复盘表</a></p>
+  </div>
+</section>
+
+<section id="c4">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">4</span><h2>年度谈判和续约</h2>
+      <p class="muted">合同到期前半年开始</p></div>
+    <p class="key">谈判的结果，一大半在开会前就定了：研究做没做透，时间点有没有抓住</p>
+    <ol class="timeline">
+      <li><b>到期前 6 个月</b><span>查清到期日、会不会自动续约、提异议的最后期限；整理一年的服务检查表和月度复盘</span></li>
+      <li><b>到期前 3—4 个月</b><span>刷新平台档案；定方案和三档目标；拿到内部授权</span></li>
+      <li><b>提异议的期限之前</b><span>要改条件，按合同书面通知对方</span></li>
+      <li><b>谈判期</b><span>开价、交换，每次会后当天发纪要</span></li>
+      <li><b>签约前</b><span>法务审核；逐条核对合同文本和谈定的内容一致</span></li>
+    </ol>
+    <div class="grid g2 gap-top">
+      <div><div class="label">方案</div><ul>
+        <li><b>分成</b>：比例；计费基数；要不要分档；归属期多长</li>
+        <li><b>服务</b>：基础服务不额外付钱，让利只换额外服务</li>
+        <li><b>写进合同</b>：每项服务给什么、给多少、多久、没给怎么办</li>
+      </ul></div>
+      <div><div class="label">谈判</div><ul>
+        <li>想清三档：必须拿到、尽量争取、可以让</li>
+        <li>想清退路：谈不成，我们怎么办，对方怎么办</li>
+        <li>先对齐怎么算，再谈给多少</li>
+        <li>开价可以高，但每条都要有理由</li>
+        <li>只交换不白给：“如果你们能……，我们可以……”</li>
+        <li>几条放在一起谈，别让对方一条一条地磨</li>
+      </ul></div>
+    </div>
+    <div class="grid g2 gap-top">
+      <div><div class="label">容易踩的坑</div><ul>
+        <li>错过提异议的期限，被自动续约</li>
+        <li>只谈比例，不谈计费基数</li>
+        <li>答应长期独占，或“条件不能比别家差”，锁死以后的谈判</li>
+      </ul></div>
+      <div class="eg"><div class="label">例子（虚构）</div><p>某平台要求维持原比例。我方拿出全年服务检查表：首发资源 12 次只到位 5 次，审核平均超时一倍。回应：比例可以谈，但首发资源和审核时效要写进合同，没做到按月扣减。最后比例略降，服务条款全部写进合同</p></div>
+    </div>
+    <p class="tpl">模板：<a href="#t4">谈判准备单</a></p>
+  </div>
+</section>
+
+<section id="c5">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">5</span><h2>推动落地</h2>
+      <p class="muted">签约前后、上线前</p></div>
+    <p class="key">签下来只是开始，商务要对上线和结果负责</p>
+    <div class="grid g2">
+      <div><div class="label">怎么做</div><ol>
+        <li><b>签约前拉齐内部</b>：产品（范围和版本节奏）、发行运营（活动和资源使用）、技术（接入和审核）、数据（口径和对账）、法务财务（合同和结算）</li>
+        <li>每件事一个负责人、一个时间点</li>
+        <li>从上线日倒推接入、审核、资源档期</li>
+        <li>每周同步进展，卡住的当周升级</li>
+      </ol>
+      <p class="muted small">需要先小范围试的，见<a href="#c7">第 7 章</a></p></div>
+      <div><div class="label">容易踩的坑</div><ul>
+        <li>签完才找技术评估，发现做不了</li>
+        <li>资源档期和版本节奏对不上，资源白白浪费</li>
+        <li>大家都参与，没人对最终结果负责</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="c6">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">6</span><h2>出问题怎么办</h2>
+      <p class="muted">资源没给、安装被拦截、审核卡住、结算有争议、对方单方面改规则</p></div>
+    <p class="key">先留证据，再按顺序升级。动用合同和付款节奏是最后一步</p>
+    <ol class="steps">
+      <li><b>记录</b><span>时间、影响范围、截图录屏、数据</span></li>
+      <li><b>沟通</b><span>对接人层面，书面说明问题和要求，给一个期限</span></li>
+      <li><b>升级</b><span>期限内没解决，升级到对方上级，我方对应层级出面</span></li>
+      <li><b>用合同</b><span>按条款要求补救或扣减，必要时调整付款节奏</span></li>
+      <li><b>归档</b><span>记进服务检查表和平台档案，下次谈判用</span></li>
+    </ol>
+    <div class="grid g2 gap-top">
+      <div><div class="label">容易踩的坑</div><ul>
+        <li>没证据就去吵</li>
+        <li>一上来就用最重的手段，把关系弄僵</li>
+        <li>问题解决了没留记录</li>
+      </ul></div>
+      <div class="eg"><div class="label">例子（虚构）</div><p>用户反馈某平台安装时弹风险提示。当天录屏、收集反馈，估算影响下载约 X 万次；邮件给对接人，限 3 个工作日答复；未解决，升级到对方负责人；同时按合同里的拦截条款，在当季结算中提出扣减</p></div>
+    </div>
+    <p class="tpl">模板：<a href="#t5">问题升级记录</a></p>
+  </div>
+</section>
+
+<section id="c7">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">7</span><h2>新业务和试点</h2>
+      <p class="muted">新平台、新入口、终端 AI、AI 与泛互产品、电竞，或任何路径不清的合作</p></div>
+    <p class="key">我们不占优势或看不清时，先用小代价验证，再谈长期</p>
+    <div class="grid g2">
+      <div><div class="label">怎么做</div><ol>
+        <li><b>判断姿态</b>：这次是对方更需要我们，还是我们更需要对方</li>
+        <li><b>拆问题</b>：只写下一个要验证的问题</li>
+        <li><b>小范围试</b>：范围、周期、成本、成功标准、转正条件，开始前写好</li>
+        <li><b>到点决定</b>：按事先写好的条件扩大或停</li>
+      </ol></div>
+      <div><div class="label">容易踩的坑</div><ul>
+        <li>一开始就签长期</li>
+        <li>没写转正条件，试点做成了长期免费</li>
+        <li>试点结束没结论，不了了之</li>
+      </ul></div>
+    </div>
+    <div class="eg gap-top"><div class="label">例子（虚构）</div><p>某厂商的 AI 助手开放应用接入。要验证：用户会不会通过助手打开我们的游戏。试点两款产品、两个月，看调用量和由此带来的新用户；达到约定的量就谈资源和长期条件，达不到就停</p></div>
+    <p class="tpl">模板：<a href="#t6">试点方案表</a></p>
+  </div>
+</section>
+
+<section id="appx">
+  <div class="wrap">
+    <div class="sec-head"><span class="num">工</span><h2>工具箱</h2>
+      <p class="muted">点开看每列怎么填和填好的例子。真实填写放团队在线文档，不放这个页面</p></div>
+    <div class="actions"><a class="btn" href="bd-templates.xlsx" download>下载模板合集（Excel）</a><span class="muted small">可导入在线文档团队共用</span></div>
+    <div class="appx gap-top">
+      <details id="t1"><summary>平台档案</summary>
+        <p class="muted">每个平台一份，记住这个平台的生意、合同和我们在它那里的分量</p>
+        <div class="label">怎么填，以及填好的例子（虚构）</div><div class="table-wrap"><table class="kv" data-heads="项目|怎么填|例子（虚构）"><thead><tr><th>项目</th><th>怎么填</th><th>例子（虚构）</th></tr></thead><tbody>
+<tr class="grp"><td colspan="3">【基本情况】</td></tr>
+<tr><td data-label="项目">平台名称和类型</td><td data-label="怎么填">手机厂商、操作系统、应用商店，或几种都是</td><td data-label="例子（虚构）">平台甲：手机厂商，自有系统和应用商店</td></tr>
+<tr><td data-label="项目">对方关键人</td><td data-label="怎么填">按层级写：业务对接、技术、商店运营、结算、上级领导</td><td data-label="例子（虚构）">业务对接 A；商店运营 B；上级 C 总</td></tr>
+<tr class="grp"><td colspan="3">【合同】</td></tr>
+<tr><td data-label="项目">合同期限</td><td data-label="怎么填">起止日期</td><td data-label="例子（虚构）">2025-01-01 至 2026-12-31</td></tr>
+<tr><td data-label="项目">续约方式和提异议期限</td><td data-label="怎么填">会不会自动续约；要改条件最晚哪天书面提出</td><td data-label="例子（虚构）">到期无异议自动续 1 年；到期前 3 个月书面提出</td></tr>
+<tr><td data-label="项目">分成和计费基数</td><td data-label="怎么填">比例；按什么算；扣不扣税、退款、通道费</td><td data-label="例子（虚构）">其他产品 30%，扣通道费后计算</td></tr>
+<tr><td data-label="项目">约定的服务</td><td data-label="怎么填">合同和服务单里写了哪些服务，写到什么程度</td><td data-label="例子（虚构）">只写了“提供运营资源”，没有量化</td></tr>
+<tr class="grp"><td colspan="3">【四本账】每月刷新</td></tr>
+<tr><td data-label="项目">硬件账</td><td data-label="怎么填">出货量、均价、零部件成本、毛利，以及变化方向</td><td data-label="例子（虚构）">10 月出货 1,200 万台，同比 −8%；存储报价上涨，毛利承压</td></tr>
+<tr><td data-label="项目">服务账</td><td data-label="怎么填">互联网服务收入和占总收入的比例</td><td data-label="例子（虚构）">服务收入占比较去年提升 2 个百分点</td></tr>
+<tr><td data-label="项目">生态账</td><td data-label="怎么填">系统装机量、活跃设备、应用数量（写清口径）</td><td data-label="例子（虚构）">系统累计装机 1 亿台（累计口径，非活跃）</td></tr>
+<tr><td data-label="项目">战略账</td><td data-label="怎么填">今年重点和管理层公开表态</td><td data-label="例子（虚构）">推新系统、做 AI 助手入口</td></tr>
+<tr class="grp"><td colspan="3">【我们的分量】</td></tr>
+<tr><td data-label="项目">我们在该平台的流水和用户</td><td data-label="怎么填">本月流水、新用户（纯新、回流分开）</td><td data-label="例子（虚构）">流水 5 亿元；新用户 300 万，其中纯新 120 万</td></tr>
+<tr><td data-label="项目">我们对它的作用</td><td data-label="怎么填">新机卖点、新系统内容、商店收入贡献</td><td data-label="例子（虚构）">新机发布会需要头部游戏演示</td></tr>
+<tr><td data-label="项目">谈不成我们的退路</td><td data-label="怎么填">自有渠道、其他平台能接住多少</td><td data-label="例子（虚构）">自有渠道可承接约三成新用户（估算）</td></tr>
+<tr class="grp"><td colspan="3">【行业对比】</td></tr>
+<tr><td data-label="项目">别家同类条件</td><td data-label="怎么填">同类产品在其他平台的条件和服务</td><td data-label="例子（虚构）">平台乙同类产品 25%，含首发资源</td></tr>
+<tr class="grp"><td colspan="3">【本月要点】</td></tr>
+<tr><td data-label="项目">本月变化</td><td data-label="怎么填">和上月比，最重要的一两条变化</td><td data-label="例子（虚构）">出货下滑，开始推 AI 入口</td></tr>
+<tr><td data-label="项目">这对我们意味着什么</td><td data-label="怎么填">一句话判断</td><td data-label="例子（虚构）">对方更需要内容撑新系统，适配和首发可以换更多资源</td></tr>
+</tbody></table></div>
+      </details>
+      <details id="t2"><summary>服务检查表</summary>
+        <p class="muted">每月查一次：平台答应给的服务，给没给、给得怎么样</p>
+        <div class="label">每列怎么填</div><div class="table-wrap"><table class="two" data-heads="列|填什么"><thead><tr><th>列</th><th>填什么</th></tr></thead><tbody>
+<tr><td data-label="列">月份</td><td data-label="填什么">填哪个月</td></tr>
+<tr><td data-label="列">平台</td><td data-label="填什么">平台名称</td></tr>
+<tr><td data-label="列">服务</td><td data-label="填什么">平台应该提供的一项服务。从合同、服务单、会议纪要里列；口头答应的也列上，注明“口头”</td></tr>
+<tr><td data-label="列">约定</td><td data-label="填什么">对方承诺的具体内容，尽量写数字：几天、几次、什么位置</td></tr>
+<tr><td data-label="列">实际</td><td data-label="填什么">这个月实际给了什么，写事实不写感受</td></tr>
+<tr><td data-label="列">结果</td><td data-label="填什么">三选一：到位、部分到位、未到位</td></tr>
+<tr><td data-label="列">证据</td><td data-label="填什么">截图、邮件、数据放在哪里。没有证据，谈判时用不上</td></tr>
+<tr><td data-label="列">跟进</td><td data-label="填什么">没到位的怎么处理、谁负责；已追补的下个月写结果</td></tr>
+</tbody></table></div>
+        <div class="label">填好的例子（虚构）</div><div class="table-wrap"><table data-heads="月份|平台|服务|约定|实际|结果|证据|跟进"><thead><tr><th>月份</th><th>平台</th><th>服务</th><th>约定</th><th>实际</th><th>结果</th><th>证据</th><th>跟进</th></tr></thead><tbody>
+<tr><td data-label="月份">2026-10</td><td data-label="平台">平台甲</td><td data-label="服务">新游首发资源</td><td data-label="约定">首页推荐 3 天</td><td data-label="实际">1 天，位置在第二屏</td><td data-label="结果">未到位</td><td data-label="证据">资源位截图 3 张</td><td data-label="跟进">已发邮件要求 11 月补 2 天，负责人小王</td></tr>
+<tr><td data-label="月份">2026-10</td><td data-label="平台">平台甲</td><td data-label="服务">审核时效</td><td data-label="约定">2 个工作日内</td><td data-label="实际">平均 4 天，最长 9 天</td><td data-label="结果">未到位</td><td data-label="证据">审核记录表</td><td data-label="跟进">月会提出，要求开加急通道</td></tr>
+<tr><td data-label="月份">2026-10</td><td data-label="平台">平台甲</td><td data-label="服务">安装体验</td><td data-label="约定">不拦截、不弹风险提示</td><td data-label="实际">拦截 2 次</td><td data-label="结果">未到位</td><td data-label="证据">录屏 2 段、用户反馈 5 条</td><td data-label="跟进">已升级到对方负责人，等回复</td></tr>
+<tr><td data-label="月份">2026-10</td><td data-label="平台">平台甲</td><td data-label="服务">节日活动</td><td data-label="约定">开屏 1 次、推送 2 次</td><td data-label="实际">全部给到</td><td data-label="结果">到位</td><td data-label="证据">活动数据</td><td data-label="跟进">—</td></tr>
+<tr><td data-label="月份">2026-10</td><td data-label="平台">平台甲</td><td data-label="服务">数据回传</td><td data-label="约定">每月 5 号前</td><td data-label="实际">11 号才给</td><td data-label="结果">部分到位</td><td data-label="证据">邮件时间</td><td data-label="跟进">提醒对方，记一次延迟</td></tr>
+</tbody></table></div>
+      </details>
+      <details id="t3"><summary>月度复盘表</summary>
+        <p class="muted">每个平台每月一张：钱花出去，换回了什么</p>
+        <div class="label">怎么填，以及填好的例子（虚构）</div><div class="table-wrap"><table class="kv" data-heads="指标|怎么填|例子（虚构）"><thead><tr><th>指标</th><th>怎么填</th><th>例子（虚构）</th></tr></thead><tbody>
+<tr><td data-label="指标">新用户合计</td><td data-label="怎么填">本月该平台带来的新用户，写清数据来源和截止日</td><td data-label="例子（虚构）">300 万（渠道后台，截至 10-31）</td></tr>
+<tr><td data-label="指标">其中纯新</td><td data-label="怎么填">第一次玩这款游戏的用户</td><td data-label="例子（虚构）">120 万，环比 −5%</td></tr>
+<tr><td data-label="指标">其中回流</td><td data-label="怎么填">以前玩过、离开后回来的用户</td><td data-label="例子（虚构）">180 万，环比 +3%</td></tr>
+<tr><td data-label="指标">流水</td><td data-label="怎么填">该平台的游戏收入</td><td data-label="例子（虚构）">5.0 亿元，同比 +6%</td></tr>
+<tr><td data-label="指标">分成支出</td><td data-label="怎么填">按合同比例估算，注明“估算”</td><td data-label="例子（虚构）">约 1.4 亿元（估算）</td></tr>
+<tr><td data-label="指标">服务到位情况</td><td data-label="怎么填">从服务检查表汇总</td><td data-label="例子（虚构）">5 项中到位 1 项、部分到位 1 项、未到位 3 项</td></tr>
+<tr><td data-label="指标">和没合作的渠道比</td><td data-label="怎么填">同期其他渠道的变化，用来判断是不是合作带来的</td><td data-label="例子（虚构）">其他渠道纯新环比 −4%，差别不大</td></tr>
+<tr><td data-label="指标">本月结论</td><td data-label="怎么填">一句话：这个月钱花得值不值</td><td data-label="例子（虚构）">收入涨主要来自老玩家，纯新没有增加，服务大半没到位</td></tr>
+<tr><td data-label="指标">下月重点</td><td data-label="怎么填">最多三件</td><td data-label="例子（虚构）">追首发资源；审核加急；准备续约材料</td></tr>
+<tr><td data-label="指标">季度节点（每季度末填）</td><td data-label="怎么填">对账结果；付款节奏怎么定；要追补什么</td><td data-label="例子（虚构）">Q4 对账差异 0.3%；首发未到位部分要求追补后再结</td></tr>
+</tbody></table></div>
+      </details>
+      <details id="t4"><summary>谈判准备单</summary>
+        <p class="muted">每场谈判一份：开会前把要什么、给什么、底线在哪想清楚</p>
+        <div class="label">怎么填，以及填好的例子（虚构）</div><div class="table-wrap"><table class="kv" data-heads="项目|怎么填|例子（虚构）"><thead><tr><th>项目</th><th>怎么填</th><th>例子（虚构）</th></tr></thead><tbody>
+<tr><td data-label="项目">这次谈什么</td><td data-label="怎么填">一句话</td><td data-label="例子（虚构）">平台甲 2027 年续约</td></tr>
+<tr><td data-label="项目">关键时间</td><td data-label="怎么填">到期日、提异议期限、对方的季末等时间点</td><td data-label="例子（虚构）">12-31 到期；9-30 前书面提异议；对方 12 月要冲年度收入</td></tr>
+<tr><td data-label="项目">必须拿到</td><td data-label="怎么填">拿不到就不签的</td><td data-label="例子（虚构）">首发资源和审核时效写进合同，没做到按月扣减</td></tr>
+<tr><td data-label="项目">尽量争取</td><td data-label="怎么填"></td><td data-label="例子（虚构）">其他产品比例 30% 降到 25%</td></tr>
+<tr><td data-label="项目">可以让</td><td data-label="怎么填">提前想好，会上用来交换</td><td data-label="例子（虚构）">合同期限从 1 年放到 2 年</td></tr>
+<tr><td data-label="项目">对方要什么</td><td data-label="怎么填">从平台档案里来：它今年缺什么</td><td data-label="例子（虚构）">新系统要头部游戏首发；年底要收入</td></tr>
+<tr><td data-label="项目">谈不成怎么办</td><td data-label="怎么填">我方和对方各自的退路</td><td data-label="例子（虚构）">我方：自有渠道承接；对方：新系统缺头部内容</td></tr>
+<tr><td data-label="项目">我们能拿来换的</td><td data-label="怎么填">首发、适配、新机联合调优、联合活动、多产品打包、付款节奏</td><td data-label="例子（虚构）">新游同步首发；新机联合调优</td></tr>
+<tr><td data-label="项目">需要谁授权</td><td data-label="怎么填">哪些我能定，哪些要请示谁</td><td data-label="例子（虚构）">比例底线需老板确认</td></tr>
+<tr><td data-label="项目">研究依据</td><td data-label="怎么填">引用平台档案和服务检查表里的哪几条</td><td data-label="例子（虚构）">全年首发资源 12 次只到位 5 次；对方服务收入占比上升</td></tr>
+<tr><td data-label="项目">条款：分成比例</td><td data-label="怎么填">现行 / 开价 / 想要 / 底线</td><td data-label="例子（虚构）">30% / 20% / 25% / 维持 30% 但服务写进合同</td></tr>
+<tr><td data-label="项目">条款：计费基数</td><td data-label="怎么填">同上</td><td data-label="例子（虚构）">扣通道费 / 再扣退款和优惠券 / 同开价 / 维持现行</td></tr>
+<tr><td data-label="项目">条款：归属期</td><td data-label="怎么填">同上</td><td data-label="例子（虚构）">永久 / 24 个月 / 24 个月 / 36 个月</td></tr>
+<tr><td data-label="项目">条款：资源承诺</td><td data-label="怎么填">同上</td><td data-label="例子（虚构）">无量化 / 写清位置、天数、补量 / 同开价 / 只写资源清单</td></tr>
+<tr><td data-label="项目">条款：期限和续约</td><td data-label="怎么填">同上</td><td data-label="例子（虚构）">1 年自动续 / 1 年不自动续 / 2 年 / 2 年可续一次</td></tr>
+</tbody></table></div>
+      </details>
+      <details id="t5"><summary>问题升级记录</summary>
+        <p class="muted">合作出问题时，一件事一行，从发现到解决全程记下来</p>
+        <div class="label">每列怎么填</div><div class="table-wrap"><table class="two" data-heads="列|填什么"><thead><tr><th>列</th><th>填什么</th></tr></thead><tbody>
+<tr><td data-label="列">发现日期</td><td data-label="填什么">哪天发现的</td></tr>
+<tr><td data-label="列">平台</td><td data-label="填什么">平台名称</td></tr>
+<tr><td data-label="列">问题</td><td data-label="填什么">发生了什么，一句话</td></tr>
+<tr><td data-label="列">影响</td><td data-label="填什么">影响多大：范围、次数、估算损失（注明估算）</td></tr>
+<tr><td data-label="列">证据</td><td data-label="填什么">截图、录屏、数据在哪</td></tr>
+<tr><td data-label="列">已沟通</td><td data-label="填什么">哪天、找谁、怎么说的、给了什么期限</td></tr>
+<tr><td data-label="列">已升级</td><td data-label="填什么">期限内没解决，哪天升级到谁</td></tr>
+<tr><td data-label="列">合同依据</td><td data-label="填什么">合同哪一条可以用</td></tr>
+<tr><td data-label="列">结果</td><td data-label="填什么">对方怎么处理的</td></tr>
+<tr><td data-label="列">状态</td><td data-label="填什么">三选一：处理中、已解决、未解决</td></tr>
+</tbody></table></div>
+        <div class="label">填好的例子（虚构）</div><div class="table-wrap"><table data-heads="发现日期|平台|问题|影响|证据|已沟通|已升级|合同依据|结果|状态"><thead><tr><th>发现日期</th><th>平台</th><th>问题</th><th>影响</th><th>证据</th><th>已沟通</th><th>已升级</th><th>合同依据</th><th>结果</th><th>状态</th></tr></thead><tbody>
+<tr><td data-label="发现日期">2026-10-08</td><td data-label="平台">平台甲</td><td data-label="问题">安装时弹风险提示</td><td data-label="影响">约 5 万次下载受影响（估算）</td><td data-label="证据">录屏 2 段，用户反馈 5 条</td><td data-label="已沟通">10-08 邮件对接人 A，限 3 个工作日答复</td><td data-label="已升级">10-13 升级到 C 总</td><td data-label="合同依据">合同里的拦截条款：拦截期间可不结算</td><td data-label="结果">10-20 对方修复；当季结算提出扣减</td><td data-label="状态">已解决</td></tr>
+<tr><td data-label="发现日期">2026-10-15</td><td data-label="平台">平台甲</td><td data-label="问题">新游审核超过 9 天</td><td data-label="影响">首发档期推迟一周</td><td data-label="证据">审核记录截图</td><td data-label="已沟通">10-15 电话加邮件找商店运营 B</td><td data-label="已升级">—</td><td data-label="合同依据">无时效条款</td><td data-label="结果">对方开了临时加急</td><td data-label="状态">已解决</td></tr>
+</tbody></table></div>
+      </details>
+      <details id="t6"><summary>试点方案表</summary>
+        <p class="muted">新合作、新业务先小范围试：开始前写清楚怎么判断成败</p>
+        <div class="label">怎么填，以及填好的例子（虚构）</div><div class="table-wrap"><table class="kv" data-heads="项目|怎么填|例子（虚构）"><thead><tr><th>项目</th><th>怎么填</th><th>例子（虚构）</th></tr></thead><tbody>
+<tr><td data-label="项目">要验证的问题</td><td data-label="怎么填">只写一个</td><td data-label="例子（虚构）">用户会不会通过 AI 助手打开我们的游戏</td></tr>
+<tr><td data-label="项目">范围</td><td data-label="怎么填">哪些产品、哪个平台、哪些用户</td><td data-label="例子（虚构）">两款产品，平台甲 AI 助手</td></tr>
+<tr><td data-label="项目">周期</td><td data-label="怎么填">起止日期</td><td data-label="例子（虚构）">2026-11-01 至 2026-12-31</td></tr>
+<tr><td data-label="项目">投入</td><td data-label="怎么填">钱、人力、资源；写明估算</td><td data-label="例子（虚构）">技术 2 人 3 周；不额外分成</td></tr>
+<tr><td data-label="项目">成功标准</td><td data-label="怎么填">看哪个数、达到多少、跟什么比</td><td data-label="例子（虚构）">每月通过助手带来新用户 ≥ 某个量，且纯新占比不低于商店</td></tr>
+<tr><td data-label="项目">扩大条件</td><td data-label="怎么填">达到什么就扩大，扩大时谈什么</td><td data-label="例子（虚构）">达标就谈固定资源位和长期条件</td></tr>
+<tr><td data-label="项目">停止条件</td><td data-label="怎么填">到什么情况就停</td><td data-label="例子（虚构）">两个月调用量低于某个量</td></tr>
+<tr><td data-label="项目">分工</td><td data-label="怎么填">每件事一个负责人</td><td data-label="例子（虚构）">商务：小王；技术：小李；数据：小张</td></tr>
+<tr><td data-label="项目">结论（结束时填）</td><td data-label="怎么填">达标没有；扩大、调整还是停；原因</td><td data-label="例子（虚构）">调用量达标，纯新占比偏低，调整入口后再试一个月</td></tr>
+</tbody></table></div>
+      </details>
+      <details id="t7"><summary>数据来源清单</summary>
+        <p class="muted">研究要用的数据去哪找、多久刷新、要注意什么</p>
+        <div class="label">每列怎么填</div><div class="table-wrap"><table class="two" data-heads="列|填什么"><thead><tr><th>列</th><th>填什么</th></tr></thead><tbody>
+<tr><td data-label="列">数据</td><td data-label="填什么">数据类别</td></tr>
+<tr><td data-label="列">看什么</td><td data-label="填什么">关注的指标</td></tr>
+<tr><td data-label="列">去哪找</td><td data-label="填什么">来源</td></tr>
+<tr><td data-label="列">多久刷新</td><td data-label="填什么">刷新频率</td></tr>
+<tr><td data-label="列">注意</td><td data-label="填什么">口径和可信度</td></tr>
+</tbody></table></div>
+        <div class="label">填好的例子（虚构）</div><div class="table-wrap"><table data-heads="数据|看什么|去哪找|多久刷新|注意"><thead><tr><th>数据</th><th>看什么</th><th>去哪找</th><th>多久刷新</th><th>注意</th></tr></thead><tbody>
+<tr><td data-label="数据">厂商出货</td><td data-label="看什么">出货量、份额、价格段结构</td><td data-label="去哪找">第三方研究机构数据</td><td data-label="多久刷新">每月</td><td data-label="注意">出货不是销量；注意品牌口径和含子品牌口径</td></tr>
+<tr><td data-label="数据">厂商财报</td><td data-label="看什么">收入、毛利、服务收入占比、管理层表态</td><td data-label="去哪找">公司财报、业绩会</td><td data-label="多久刷新">季度发布，有新的当月更新</td><td data-label="注意">看变化方向，不只看绝对值</td></tr>
+<tr><td data-label="数据">零部件成本</td><td data-label="看什么">存储、芯片、屏幕等报价变化</td><td data-label="去哪找">供应链报价、行业研究</td><td data-label="多久刷新">每月</td><td data-label="注意">是估算，写清来源和日期</td></tr>
+<tr><td data-label="数据">系统和生态体量</td><td data-label="看什么">装机量、活跃设备、应用数量</td><td data-label="去哪找">官方发布会、开发者大会、公告</td><td data-label="多久刷新">有发布就更新，每月核一次</td><td data-label="注意">累计装机不是活跃</td></tr>
+<tr><td data-label="数据">头部游戏公司</td><td data-label="看什么">收入、主力产品、新品节奏、渠道策略</td><td data-label="去哪找">公司财报、业绩会、公开报道</td><td data-label="多久刷新">季度发布，有新的当月更新</td><td data-label="注意">报道要标“待核”</td></tr>
+<tr><td data-label="数据">游戏收入榜</td><td data-label="看什么">头部产品排名和变化</td><td data-label="去哪找">第三方榜单</td><td data-label="多久刷新">每月</td><td data-label="注意">第三方估算，不是官方流水</td></tr>
+<tr><td data-label="数据">我方渠道数据</td><td data-label="看什么">各平台新用户（纯新、回流）、流水</td><td data-label="去哪找">内部数据后台</td><td data-label="多久刷新">每月</td><td data-label="注意">写清截止日；人数是否去重要注明</td></tr>
+<tr><td data-label="数据">合作服务情况</td><td data-label="看什么">服务到位情况、问题记录</td><td data-label="去哪找">服务检查表、问题升级记录</td><td data-label="多久刷新">每月</td><td data-label="注意">以证据为准</td></tr>
+</tbody></table></div>
+      </details>
+      <details><summary>对照岗位要求：这本手册练什么</summary>
+        <div class="table-wrap"><table class="two" data-heads="岗位要求|对应章节">
+          <thead><tr><th>岗位要求</th><th>对应章节</th></tr></thead>
+          <tbody>
+            <tr><td data-label="岗位要求">手机厂商和操作系统生态合作，维护重点伙伴，拓展新机会</td><td data-label="对应章节">1、3、7</td></tr>
+            <tr><td data-label="岗位要求">主导商业模式、收益分配、推广资源和合同条款谈判</td><td data-label="对应章节">4</td></tr>
+            <tr><td data-label="岗位要求">协同产品、发行、运营、技术、数据，推进签约、上线和试点，对结果负责</td><td data-label="对应章节">5、7</td></tr>
+            <tr><td data-label="岗位要求">结合用户数据、行业研究和合作表现，评估增量与投入产出，找可复制的模式</td><td data-label="对应章节">1、2、3</td></tr>
+            <tr><td data-label="岗位要求">准确把握双方诉求，兼顾收益和长期合作</td><td data-label="对应章节">1、4</td></tr>
+            <tr><td data-label="岗位要求">路径不清时拆解问题，推动验证落地</td><td data-label="对应章节">7</td></tr>
+            <tr><td data-label="岗位要求">重视数据准确，形成清晰判断和行动建议</td><td data-label="对应章节">2、3</td></tr>
+            <tr><td data-label="岗位要求">加分：电竞、AI 与泛互增长、系统级入口和终端 AI、用 AI 工具提效</td><td data-label="对应章节">2、7</td></tr>
+          </tbody>
+        </table></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap small muted">
+    <p>团队共用，按需更新。例子均为虚构；条款相关内容是通用做法，以实际合同和法务意见为准</p>
+  </div>
+</footer>
+
+<button type="button" id="toTop" aria-label="回到顶部">↑ 顶部</button>
+
+<script>
+(function () {
+  function sget(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function sset(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  function jget(k, d) { try { var v = JSON.parse(sget(k)); return v == null ? d : v; } catch (e) { return d; } }
+  function jset(k, v) { sset(k, JSON.stringify(v)); }
+  function $(id) { return document.getElementById(id); }
+  function all(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
+  var root = document.documentElement;
+
+  /* 主题：跟随系统 → 浅色 → 深色 */
+  var themeBtn = $("themeBtn"), tc = $("themeColor");
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
+  var NAMES = { system: "跟随系统", light: "浅色", dark: "深色" };
+  function currentTheme() { var t = sget("bd-handbook-theme"); return (t === "light" || t === "dark") ? t : "system"; }
+  function applyTheme(t) {
+    if (t === "system") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", t);
+    var dark = t === "dark" || (t === "system" && mq && mq.matches);
+    tc.setAttribute("content", dark ? "#0d1520" : "#ffffff");
+    themeBtn.textContent = NAMES[t];
+  }
+  themeBtn.addEventListener("click", function () {
+    var order = ["system", "light", "dark"];
+    var next = order[(order.indexOf(currentTheme()) + 1) % 3];
+    sset("bd-handbook-theme", next); applyTheme(next);
+  });
+  if (mq) { var onMq = function () { applyTheme(currentTheme()); };
+    if (mq.addEventListener) mq.addEventListener("change", onMq); else if (mq.addListener) mq.addListener(onMq); }
+  applyTheme(currentTheme());
+
+  /* 目录高亮 + 回到顶部 */
+  var links = all("#tocLinks a"), bar = $("tocLinks");
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  var toTop = $("toTop"), activeIdx = -1, ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.scrollY || window.pageYOffset;
+    toTop.classList.toggle("show", y > 900);
+    var idx = -1;
+    for (var i = 0; i < secs.length; i++) { if (secs[i] && secs[i].getBoundingClientRect().top <= 90) idx = i;
+    if (idx < 0) idx = 0; }
+    if (idx !== activeIdx) {
+      activeIdx = idx;
+      links.forEach(function (a, i) { a.classList.toggle("active", i === idx); });
+      if (idx >= 0) { var a = links[idx]; bar.scrollLeft = a.offsetLeft - (bar.clientWidth - a.offsetWidth) / 2; }
+    }
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+
+})();
+</script>
+</body>
+</html>
